@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix m: <http://example.org/memory#> .
+
+m:NamedEntity a owl:Class ;
+    rdfs:label "Named Entity" ;
+    rdfs:comment "An entity with a name." .
+
+m:Person a owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "A person stored in the memory RDF graph." ;
+    rdfs:subClassOf m:NamedEntity .
+
+m:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:comment "Display name of the entity." ;
+    rdfs:domain m:NamedEntity ;
+    rdfs:range xsd:string .
+
+m:firstName a owl:DatatypeProperty ;
+    rdfs:label "first name" ;
+    rdfs:comment "The given name of the person." ;
+    rdfs:domain m:Person ;
+    rdfs:range xsd:string .
+
+m:lastName a owl:DatatypeProperty ;
+    rdfs:label "last name" ;
+    rdfs:comment "The family name of the person." ;
+    rdfs:domain m:Person ;
+    rdfs:range xsd:string .
