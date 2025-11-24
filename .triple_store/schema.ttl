@@ -1,32 +1,66 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix m: <http://example.org/memory#> .
-
-m:NamedEntity a owl:Class ;
-    rdfs:label "Named Entity" ;
-    rdfs:comment "An entity with a name." .
-
-m:Person a owl:Class ;
-    rdfs:label "Person" ;
-    rdfs:comment "A person stored in the memory RDF graph." ;
-    rdfs:subClassOf m:NamedEntity .
-
-m:name a owl:DatatypeProperty ;
-    rdfs:label "name" ;
-    rdfs:comment "Display name of the entity." ;
-    rdfs:domain m:NamedEntity ;
-    rdfs:range xsd:string .
-
-m:firstName a owl:DatatypeProperty ;
-    rdfs:label "first name" ;
-    rdfs:comment "The given name of the person." ;
-    rdfs:domain m:Person ;
-    rdfs:range xsd:string .
-
-m:lastName a owl:DatatypeProperty ;
-    rdfs:label "last name" ;
-    rdfs:comment "The family name of the person." ;
-    rdfs:domain m:Person ;
-    rdfs:range xsd:string .
+m:lastName rdfs:comment "The family name of the person." ;
+	a owl:DatatypeProperty ;
+	rdfs:range xs:string ;
+	rdfs:domain m:Person ;
+	rdfs:label "last name" .
+m:Person rdfs:comment "A person stored in the memory RDF graph." ;
+	a owl:Class ;
+	rdfs:subClassOf m:NamedEntity ;
+	rdfs:label "Person" .
+m:name rdfs:comment "Display name of the entity." ;
+	a owl:DatatypeProperty ;
+	rdfs:range xs:string ;
+	rdfs:domain m:NamedEntity ;
+	rdfs:label "name" .
+m:NamedEntity rdfs:comment "An entity with a name." ;
+	a owl:Class ;
+	rdfs:label "Named Entity" .
+m:birthDate rdfs:comment "Date of birth for a person." ;
+	a owl:DatatypeProperty ;
+	rdfs:range xs:date ;
+	rdfs:domain m:Person ;
+	rdfs:label "birth date" .
+m:title rdfs:comment "Title of a book." ;
+	a owl:DatatypeProperty ;
+	rdfs:range xs:string ;
+	rdfs:domain m:Book ;
+	rdfs:label "title" .
+m:publisher rdfs:comment "Publisher of a book." ;
+	a owl:DatatypeProperty ;
+	rdfs:range xs:string ;
+	rdfs:domain m:Book ;
+	rdfs:label "publisher" .
+m:author rdfs:comment "Author of a book." ;
+	a owl:ObjectProperty ;
+	rdfs:range m:Person ;
+	rdfs:domain m:Book ;
+	rdfs:label "author" .
+m:publicationYear rdfs:comment "Publication year of a book." ;
+	a owl:DatatypeProperty ;
+	rdfs:range xs:gYear ;
+	rdfs:domain m:Book ;
+	rdfs:label "publication year" .
+m:isbn rdfs:comment "ISBN identifier for a book." ;
+	a owl:DatatypeProperty ;
+	rdfs:range xs:string ;
+	rdfs:domain m:Book ;
+	rdfs:label "ISBN" .
+m:firstName rdfs:comment "The given name of the person." ;
+	a owl:DatatypeProperty ;
+	rdfs:range xs:string ;
+	rdfs:domain m:Person ;
+	rdfs:label "first name" .
+m:Book rdfs:comment "A written work such as a book." ;
+	a owl:Class ;
+	rdfs:subClassOf m:NamedEntity ;
+	rdfs:label "Book" .
+m:pageCount rdfs:comment "Number of pages in a book." ;
+	a owl:DatatypeProperty ;
+	rdfs:range xs:integer ;
+	rdfs:domain m:Book ;
+	rdfs:label "page count" .

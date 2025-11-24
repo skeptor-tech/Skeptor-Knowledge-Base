@@ -1,7 +1,20 @@
-@prefix m: <http://example.org/memory#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-
-m:albertEinstein a m:Person ;
-    m:name "Albert Einstein" ;
-    m:firstName "Albert" ;
-    m:lastName "Einstein" .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix m: <http://example.org/memory#> .
+m:godelEscherBach a m:Book ;
+	m:title "Gödel, Escher, Bach: An Eternal Golden Braid" ;
+	m:publisher "Basic Books" ;
+	m:author m:douglasHofstadter ;
+	m:publicationYear "1979"^^xs:gYear ;
+	m:isbn "978-0-465-02656-2" ;
+	m:pageCount 777 .
+m:douglasHofstadter m:lastName "Hofstadter" ;
+	m:name "Douglas Hofstadter" ;
+	a m:Person ;
+	m:birthDate "1945-02-15"^^xs:date ;
+	m:firstName "Douglas" .
+m:albertEinstein m:lastName "Einstein" ;
+	m:name "Albert Einstein" ;
+	a m:Person ;
+	m:birthDate "1879-03-14"^^xs:date ;
+	m:firstName "Albert" .
