@@ -40,8 +40,9 @@
 
 ## Книги
 
-- *Gödel, Escher, Bach: An Eternal Golden Braid* (1979) — Пулитцер и National
-  Book Award; популяризирует «странные петли» и неполноту.
+- [*Gödel, Escher, Bach: An Eternal Golden Braid*](../books/godel-escher-bach.md)
+  (1979) — Пулитцер и National Book Award; популяризирует «странные петли» и
+  неполноту.
 - *The Mind’s I* (1981, совместно с Дэниелом Деннеттом) — антология о сознании
   и искусственном интеллекте.
 - *Metamagical Themas* (1985) — сборник статей из Scientific American, где он

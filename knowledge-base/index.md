@@ -15,6 +15,11 @@
 - [People Topic Index](people/topic_index.md) — Profiles of researchers and
   practitioners who influence how I think about AI and systems design.
 
+## Books
+
+- [Books Topic Index](books/topic_index.md) — Key books and editions that inform
+  my thinking on cognition, AI, and systems.
+
 ## Utilities
 
 - [Utilities Topic Index](utilities/topic_index.md) — CLI and tooling snippets
