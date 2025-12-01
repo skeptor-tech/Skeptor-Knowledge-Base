@@ -31,14 +31,6 @@ lightpanda fetch --dump <URL> > /tmp/<filename>.html
 
 do not use curl!
 
-- lynx: a text-based web browser
-
-for example to extract text from HTML page code you can use this command:
-
-```bash
-lynx -dump -nolist /tmp/<filename>.html > /tmp/<filename>.txt
-```
-
 ## Triple Store (memory)
 
 You have access to a triple store, which is a structured data store memory of the knowledge base. It hold the ontology of the knowledge base.

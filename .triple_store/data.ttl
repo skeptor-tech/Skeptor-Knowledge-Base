@@ -1,20 +1,35 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix m: <http://example.org/memory#> .
+m:hansAlbertEinstein m:lastName "Einstein" ;
+	m:name "Hans Albert Einstein" ;
+	a m:Person ;
+	m:birthDate "1904-05-14"^^xsd:date ;
+	m:firstName "Hans Albert" .
 m:godelEscherBach a m:Book ;
 	m:title "Gödel, Escher, Bach: An Eternal Golden Braid" ;
 	m:publisher "Basic Books" ;
 	m:author m:douglasHofstadter ;
-	m:publicationYear "1979"^^xs:gYear ;
+	m:publicationYear "1979"^^xsd:gYear ;
 	m:isbn "978-0-465-02656-2" ;
 	m:pageCount 777 .
 m:douglasHofstadter m:lastName "Hofstadter" ;
 	m:name "Douglas Hofstadter" ;
 	a m:Person ;
-	m:birthDate "1945-02-15"^^xs:date ;
+	m:birthDate "1945-02-15"^^xsd:date ;
 	m:firstName "Douglas" .
+m:eduardEinstein m:lastName "Einstein" ;
+	m:name "Eduard Einstein" ;
+	a m:Person ;
+	m:birthDate "1910-07-28"^^xsd:date ;
+	m:firstName "Eduard" .
+m:lieserlEinstein m:lastName "Einstein" ;
+	m:name "Lieserl Einstein" ;
+	a m:Person ;
+	m:firstName "Lieserl" .
 m:albertEinstein m:lastName "Einstein" ;
 	m:name "Albert Einstein" ;
+	m:child m:hansAlbertEinstein , m:eduardEinstein , m:lieserlEinstein ;
 	a m:Person ;
-	m:birthDate "1879-03-14"^^xs:date ;
+	m:birthDate "1879-03-14"^^xsd:date ;
 	m:firstName "Albert" .
